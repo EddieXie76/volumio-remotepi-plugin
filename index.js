@@ -131,7 +131,6 @@ remotepi.prototype.getI18nFile = function(lang_code) {
 
 remotepi.prototype.saveConf = function(data) {
     var self = this;
-    var defer = libQ.defer();
     var responseData;
 
     if (self.config.get("enable_gpio17") != data.gpio17) {
@@ -156,7 +155,6 @@ remotepi.prototype.saveConf = function(data) {
             ]
         }
         self.commandRouter.broadcastMessage("openModal", responseData);
-	defer.resolve();
     } else {
         self.commandRouter.pushToastMessage("info", self.commandRouter.getI18nString("REMOTEPI.PLUGIN_NAME"), self.commandRouter.getI18nString("REMOTEPI.NO_CHANGES"));
     }
