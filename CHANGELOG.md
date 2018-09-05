@@ -1,3 +1,11 @@
+**1.1.1**
+
+* index.js: Change in method "writeBootStr" in order to avoid unnecessary write operations on /boot/config.txt
+* i18n/strings_en.json: Fixed typo
+* i18n/strings_de.json: Minor textual changes
+* package.json: Updated version number to 1.1.1
+
+
 **1.1.0**
 
 * index.js: Added modal showing up if a reboot is required; added localization support for modals, toast messages etc.
