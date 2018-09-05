@@ -1,6 +1,6 @@
 # Volumio plugin for RemotePi
 
-This plugin is made for Volumio 2 and enables support for the RemotePi board for Pi 3, Pi 2, B+ and B from MSL Digital Solutions.
+This plugin is made for Volumio 2 and enables support for the RemotePi boards for Pi 3 B+/Pi 3 B and Pi 2/Pi 1 B+ from MSL Digital Solutions.
 
 ## Shutdown and cutting power
 After activating the plugin the RemotePi board will get signaled as soon as Volumio is shut down via the GUI.
