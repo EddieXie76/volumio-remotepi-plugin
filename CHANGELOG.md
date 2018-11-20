@@ -1,3 +1,9 @@
+**1.1.2**
+
+* index.js: Code linted according to JavaScript Semi-Standard Style (https://github.com/Flet/semistandard)
+* package.json: Updated version number to 1.1.2
+
+
 **1.1.1**
 
 * index.js: Change in method "writeBootStr" in order to avoid unnecessary write operations on /boot/config.txt
