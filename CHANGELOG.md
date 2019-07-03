@@ -1,3 +1,9 @@
+**1.1.3**
+
+* index.js: Reworked method "getI18nFile"; removed unnecessary variable in methods "writeBootStr" and "rmBootStr"; make use of "const" and "let"
+* package.json: Updated version number to 1.1.3; changed to up-to-date versions of npm modules "fs-extra", "v-conf", "onoff" and "sleep"
+
+
 **1.1.2**
 
 * index.js: Code linted according to JavaScript Semi-Standard Style (https://github.com/Flet/semistandard)
