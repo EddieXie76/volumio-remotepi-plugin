@@ -131,7 +131,7 @@ remotepi.prototype.saveConf = function (data) {
         name: self.commandRouter.getI18nString('COMMON.CONTINUE'),
         class: 'btn btn-info',
         emit: 'callMethod',
-        payload: {'endpoint': 'miscellanea/remotepi', 'method': 'closeModals'}
+        payload: { 'endpoint': 'miscellanea/remotepi', 'method': 'closeModals' }
       }
     ]
   };
@@ -176,10 +176,15 @@ remotepi.prototype.dtctHwShutdown = function () {
 remotepi.prototype.writeBootStr = function () {
   const self = this;
   const searchexp = new RegExp(configTxtBanner + 'dtoverlay=.*' + os.EOL);
-  let bootstring = 'dtoverlay=lirc-rpi,gpio_in_pin=18' + os.EOL;
+  const kernelMajor = os.release().slice(0, os.release().indexOf('.'));
+  const kernelMinor = os.release().slice(os.release().indexOf('.') + 1, os.release().indexOf('.', os.release().indexOf('.') + 1));
+  let bootstring = 'dtoverlay=gpio-ir,gpio_pin=18' + os.EOL;
 
   if (self.config.get('enable_gpio17')) {
-    bootstring = 'dtoverlay=lirc-rpi,gpio_in_pin=17' + os.EOL;
+    bootstring = 'dtoverlay=gpio-ir,gpio_pin=17' + os.EOL;
+  }
+  if (kernelMajor < '4' || (kernelMajor === '4' && kernelMinor < '19')) {
+    bootstring = bootstring.replace('gpio-ir,gpio_pin', 'lirc-rpi,gpio_in_pin');
   }
   fs.readFile('/boot/config.txt', 'utf8', function (err, configTxt) {
     if (err) {
