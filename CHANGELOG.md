@@ -1,3 +1,9 @@
+**1.1.4**
+
+* index.js: Adapted bootstring for kernel version 4.19 and higher, reflecting the change from lirc-rpi to gpio-ir
+* package.json: Updated version number to 1.1.4; changed to up-to-date version of npm module "onoff"
+
+
 **1.1.3**
 
 * index.js: Reworked method "getI18nFile"; removed unnecessary variable in methods "writeBootStr" and "rmBootStr"; make use of "const" and "let"
