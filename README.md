@@ -13,4 +13,4 @@ The plugin then initiates the shutdown of Volumio and sends a signal back to the
 The plugin configures Volumio to load the necessary lirc-rpi overlay for the IR receiver of the RemotePi board. By default the gpio\_in\_pin parameter is set to 18.
 But as RemotePi boards can be modified to use GPIO17 for the IR receiver instead of GPIO18 the plugin allows to set up the configuration accordingly.
 
-**Note: The plugin will not install and setup LIRC!** This can be achieved by installing the IR remote controller plugin. Pay attention to get version 1.2.0 of the IR remote controller plugin. Earlier versions will override the gpio\_in\_pin setting with GPIO25.
+**Note: The plugin will not install and setup LIRC!** This can be achieved by installing the IR remote controller plugin. Pay attention to get at least version 1.2.0 of the IR remote controller plugin. Earlier versions will override the gpio\_in\_pin setting with GPIO25.
